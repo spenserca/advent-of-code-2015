@@ -13,7 +13,7 @@
     "jest": "^23.6.0"
   },
   "scripts": {
-    "lint": "eslint --color -c ./config/.eslintrc.js '**/*.js'",
+    "lint": "eslint --color -c ./config/.eslintrc.js **/*.js",
     "lint:file": "eslint --color -c ./config/.eslintrc.js",
     "test": "jest --config ./config/jest.config.js",
     "verify": "yarn lint && yarn test"

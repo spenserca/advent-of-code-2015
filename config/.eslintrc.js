@@ -4,6 +4,7 @@ module.exports = {
   },
   extends: 'get-off-my-lawn',
   rules: {
+    'eslint-comments/no-unused-disable': 'off',
     'no-multiple-empty-lines': [
       'error',
       {
