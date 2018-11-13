@@ -5,4 +5,8 @@ const day012 = require('./day012');
 // eslint-disable-next-line no-sync
 const input = fs.readFileSync('./Day01/input.txt', 'utf8');
 
-module.exports = () => `Day01.1: ${day011(input)}. Day01.2: ${day012(input)}.`;
+const dayOneSolutions = () => `Day011: ${day011(input)}. Day012: ${day012(input)}.`;
+
+console.log(dayOneSolutions());
+
+module.exports = dayOneSolutions;

@@ -1,22 +1,18 @@
 module.exports = (input) => {
-  let floorChanges = 1;
+  let currentFloor = 0;
 
-  input.split('')
-    .reduce((acc, currentVal) => {
-      if (currentVal === '(') {
-        acc++;
+  const floorsVisited = input.split('')
+    .map((value) => {
+      if (value === '(') {
+        currentFloor++;
       }
 
-      if (currentVal === ')') {
-        acc--;
+      if (value === ')') {
+        currentFloor--;
       }
 
-      if (acc !== -1) {
-        floorChanges++;
-      }
+      return currentFloor;
+    });
 
-      return acc;
-    }, 0);
-
-  return floorChanges;
+  return floorsVisited.indexOf(-1) + 1;
 };
